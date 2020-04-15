@@ -5,11 +5,11 @@ struct StaticDummyData {
     static func getListViewData() -> [(Section, [ListModel])] {
         return [
             (Section(title: "Test 1"), [
-                ListModel(color: .red),
-                ListModel(color: .red),
-                ListModel(color: .red),
-                ListModel(color: .red),
-                ListModel(color: .red)
+                ListModel(color: .blue),
+                ListModel(color: .blue),
+                ListModel(color: .blue),
+                ListModel(color: .blue),
+                ListModel(color: .blue)
             ]),
             (Section(title: "Test 2"), [
                 ListModel(color: .blue),
@@ -24,15 +24,20 @@ struct StaticDummyData {
     static func getDetailViewData() -> [(Section, [DetailModel])] {
         return [
             (Section(title: "Header"), [
+                DetailModel(color: .red),
+                DetailModel(color: .red),
+                DetailModel(color: .red),
+                DetailModel(color: .red),
                 DetailModel(color: .red)
             ]),
-            (Section(title: "Title"), [
+            (Section(title: "Related 1"), [
                 DetailModel(color: .blue),
                 DetailModel(color: .blue),
                 DetailModel(color: .blue),
                 DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
+                DetailModel(color: .blue)
+            ]),
+            (Section(title: "Related 2"), [
                 DetailModel(color: .blue),
                 DetailModel(color: .blue),
                 DetailModel(color: .blue),
