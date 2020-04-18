@@ -4,14 +4,14 @@ struct StaticDummyData {
     
     static func getListViewData() -> [(Section, [ListModel])] {
         return [
-            (Section(title: "Test 1"), [
+            (Section(title: "Item 1"), [
                 ListModel(color: .blue),
                 ListModel(color: .blue),
                 ListModel(color: .blue),
                 ListModel(color: .blue),
                 ListModel(color: .blue)
             ]),
-            (Section(title: "Test 2"), [
+            (Section(title: "Item 2"), [
                 ListModel(color: .blue),
                 ListModel(color: .blue),
                 ListModel(color: .blue),
@@ -29,20 +29,6 @@ struct StaticDummyData {
                 DetailModel(color: .red),
                 DetailModel(color: .red),
                 DetailModel(color: .red)
-            ]),
-            (Section(title: "Related 1"), [
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue)
-            ]),
-            (Section(title: "Related 2"), [
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue),
-                DetailModel(color: .blue)
             ])
         ]
     }

@@ -19,7 +19,9 @@
 		1294D96C24437CEA00171F05 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D96B24437CEA00171F05 /* ListViewModel.swift */; };
 		1294D96E2443919C00171F05 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D96D2443919C00171F05 /* DetailViewModel.swift */; };
 		1294D97024445B6200171F05 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D96F24445B6200171F05 /* SectionView.swift */; };
-		1294D97B24446C4E00171F05 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = 1294D97A24446C4E00171F05 /* Gifu */; };
+		12C5F159244B9B9800400062 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 12C5F158244B9B9800400062 /* FloatingPanel */; };
+		12C5F15C244B9D4600400062 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5F15B244B9D4600400062 /* CameraView.swift */; };
+		12C5F15F244B9D8E00400062 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5F15E244B9D8E00400062 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		1294D96B24437CEA00171F05 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		1294D96D2443919C00171F05 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		1294D96F24445B6200171F05 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		12C5F15B244B9D4600400062 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		12C5F15E244B9D8E00400062 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1294D97B24446C4E00171F05 /* Gifu in Frameworks */,
+				12C5F159244B9B9800400062 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,9 +74,11 @@
 		1294D947244377DE00171F05 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
+				12C5F15D244B9D7F00400062 /* Others */,
 				1294D95E244377FE00171F05 /* App */,
 				1294D95D244377F300171F05 /* DetailView */,
 				1294D95C244377E600171F05 /* ListView */,
+				12C5F15A244B9CFB00400062 /* CameraView */,
 			);
 			path = Temp;
 			sourceTree = "<group>";
@@ -103,12 +109,28 @@
 				1294D956244377DE00171F05 /* Info.plist */,
 				1294D951244377DE00171F05 /* Assets.xcassets */,
 				1294D948244377DE00171F05 /* AppDelegate.swift */,
-				1294D96F24445B6200171F05 /* SectionView.swift */,
-				122C6D542444AD16008D05BE /* StaticDummyData.swift */,
 				1294D953244377DE00171F05 /* LaunchScreen.storyboard */,
 				1294D94E244377DE00171F05 /* Main.storyboard */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		12C5F15A244B9CFB00400062 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				12C5F15B244B9D4600400062 /* CameraView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		12C5F15D244B9D7F00400062 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				1294D96F24445B6200171F05 /* SectionView.swift */,
+				122C6D542444AD16008D05BE /* StaticDummyData.swift */,
+				12C5F15E244B9D8E00400062 /* NavigationController.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +150,7 @@
 			);
 			name = Temp;
 			packageProductDependencies = (
-				1294D97A24446C4E00171F05 /* Gifu */,
+				12C5F158244B9B9800400062 /* FloatingPanel */,
 			);
 			productName = Temp;
 			productReference = 1294D945244377DE00171F05 /* Temp.app */;
@@ -159,7 +181,7 @@
 			);
 			mainGroup = 1294D93C244377DE00171F05;
 			packageReferences = (
-				1294D97924446C4E00171F05 /* XCRemoteSwiftPackageReference "Gifu" */,
+				12C5F157244B9B9800400062 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 			);
 			productRefGroup = 1294D946244377DE00171F05 /* Products */;
 			projectDirPath = "";
@@ -194,9 +216,11 @@
 				1294D949244377DE00171F05 /* AppDelegate.swift in Sources */,
 				1294D97024445B6200171F05 /* SectionView.swift in Sources */,
 				1294D96624437A6000171F05 /* DetailView.swift in Sources */,
+				12C5F15F244B9D8E00400062 /* NavigationController.swift in Sources */,
 				1294D96824437A6A00171F05 /* ListView.swift in Sources */,
 				122C6D552444AD16008D05BE /* StaticDummyData.swift in Sources */,
 				1294D96C24437CEA00171F05 /* ListViewModel.swift in Sources */,
+				12C5F15C244B9D4600400062 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,21 +424,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1294D97924446C4E00171F05 /* XCRemoteSwiftPackageReference "Gifu" */ = {
+		12C5F157244B9B9800400062 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kaishin/Gifu.git";
+			repositoryURL = "https://github.com/SCENEE/FloatingPanel";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.2;
+				minimumVersion = 1.7.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1294D97A24446C4E00171F05 /* Gifu */ = {
+		12C5F158244B9B9800400062 /* FloatingPanel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1294D97924446C4E00171F05 /* XCRemoteSwiftPackageReference "Gifu" */;
-			productName = Gifu;
+			package = 12C5F157244B9B9800400062 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

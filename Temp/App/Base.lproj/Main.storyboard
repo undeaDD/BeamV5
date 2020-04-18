@@ -1,58 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cP9-aq-UOD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MLp-W7-SFZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="koh-fQ-e8Z">
+        <!--Navigation Controller-->
+        <scene sceneID="7Av-vs-xdI">
             <objects>
-                <tabBarController id="cP9-aq-UOD" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bQm-Db-c01">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                <navigationController id="MLp-W7-SFZ" customClass="NavigationController" customModule="Temp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d4R-nl-scL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="eUM-0E-6ne" kind="relationship" relationship="viewControllers" id="yzS-ax-vFg"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Rs-Wm-FFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-421" y="-13"/>
-        </scene>
-        <!--ListView-->
-        <scene sceneID="aeI-Ad-dri">
-            <objects>
-                <navigationController id="eUM-0E-6ne" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ListView" image="music.note.list" catalog="system" id="FfJ-Aq-aJf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RGe-S6-RJ2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="tmu-8a-xzQ" kind="relationship" relationship="rootViewController" id="p23-du-STB"/>
+                        <segue destination="63g-NS-T86" kind="relationship" relationship="rootViewController" id="n3t-fs-m4c"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X1y-Rq-ejp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIL-mW-Xae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="-13"/>
+            <point key="canvasLocation" x="-245" y="241"/>
         </scene>
-        <!--ListView-->
-        <scene sceneID="p9f-Vt-tf9">
+        <!--CameraView-->
+        <scene sceneID="z36-rF-UHv">
             <objects>
-                <viewControllerPlaceholder storyboardName="ListView" id="tmu-8a-xzQ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="h4K-0N-13t"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3TZ-o5-dXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="63g-NS-T86" customClass="CameraView" customModule="Temp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G0K-08-Cni">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-wb-WEa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IHA-wb-WEa" secondAttribute="bottom" id="53i-4w-TJK"/>
+                            <constraint firstItem="IHA-wb-WEa" firstAttribute="leading" secondItem="CTJ-oI-XpM" secondAttribute="leading" id="6e7-xG-2cS"/>
+                            <constraint firstItem="IHA-wb-WEa" firstAttribute="top" secondItem="G0K-08-Cni" secondAttribute="top" id="KT0-lg-Clk"/>
+                            <constraint firstItem="IHA-wb-WEa" firstAttribute="trailing" secondItem="CTJ-oI-XpM" secondAttribute="trailing" id="eDq-W3-lnf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CTJ-oI-XpM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CameraView" id="c8t-Lq-0nw">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle.fill" catalog="system" id="0GK-Bj-y4g">
+                            <connections>
+                                <action selector="buttonPressed" destination="63g-NS-T86" id="Ker-be-Ynt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sessionView" destination="IHA-wb-WEa" id="oi2-b3-oLb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsy-B0-rzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="-13"/>
+            <point key="canvasLocation" x="615.94202898550725" y="239.73214285714283"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
     <resources>
-        <image name="music.note.list" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
