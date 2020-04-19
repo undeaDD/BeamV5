@@ -1,18 +1,15 @@
 import UIKit
-import FloatingPanel
 
 class ListView: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     private var currentSnapshot: NSDiffableDataSourceSnapshot<Section, ListModel>?
     private lazy var dataSource = createDataSource()
-    var detailPanel: FloatingPanelController?
     
     override func viewDidLoad() {
         collectionView.registerSection()
         collectionView.collectionViewLayout = createLayout()
         collectionView.dataSource = dataSource
-        collectionView.delegate = self
         
         // Update Data with update function
         DispatchQueue.main.async { [weak self] in
@@ -68,44 +65,5 @@ class ListView: UIViewController {
         section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4)
         
         return UICollectionViewCompositionalLayout(section: section)
-    }
-}
-
-extension ListView: UICollectionViewDelegate, FloatingPanelControllerDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if detailPanel != nil {
-            detailPanel?.hide(animated: true)
-            detailPanel = nil
-        } else {
-            
-            if let contentView = UIStoryboard(name: "DetailView", bundle: .main).instantiateInitialViewController() as? DetailView,
-                let navController = UIApplication.shared.windows.first?.rootViewController as? NavigationController,
-                let cameraView = navController.topViewController as? CameraView {
-                    cameraView.listPanel?.move(to: .full, animated: true)
-                    
-                    detailPanel = FloatingPanelController()
-                    detailPanel?.surfaceView.cornerRadius = 16.0
-                    detailPanel?.isRemovalInteractionEnabled = true
-                    detailPanel?.backdropView.dismissalTapGestureRecognizer.isEnabled = true
-                    detailPanel?.set(contentViewController: contentView)
-                    detailPanel?.track(scrollView: contentView.collectionView)
-                    detailPanel?.delegate = self
-                    detailPanel?.addPanel(toParent: cameraView)
-            }
-        }
-    }
-
-    func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
-        HalfLayout()
-    }
-    
-}
-
-class HalfLayout: FloatingPanelLayout {
-    var initialPosition: FloatingPanelPosition = .half
-    var supportedPositions: Set<FloatingPanelPosition> = [.half]
-    func insetFor(position: FloatingPanelPosition) -> CGFloat? {
-        return position == .half ? 400 : nil
     }
 }

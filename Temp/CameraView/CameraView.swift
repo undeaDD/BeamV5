@@ -32,14 +32,13 @@ class CameraView: UIViewController {
             listPanel = nil
         } else {
             listPanel = FloatingPanelController()
-            if let contentView = UIStoryboard(name: "ListView", bundle: .main).instantiateInitialViewController() as? ListView {
+            if let contentView = UIStoryboard(name: "ListView", bundle: .main).instantiateInitialViewController() {
                 listPanel?.surfaceView.backgroundColor = .clear
                 listPanel?.surfaceView.cornerRadius = 16.0
                 listPanel?.isRemovalInteractionEnabled = true
-                listPanel?.surfaceView.containerMargins = .init(top: 0.0, left: 8.0, bottom: 16.0, right: 8.0)
+                listPanel?.surfaceView.contentInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
                 listPanel?.backdropView.dismissalTapGestureRecognizer.isEnabled = true
                 listPanel?.set(contentViewController: contentView)
-                listPanel?.track(scrollView: contentView.collectionView)
                 listPanel?.addPanel(toParent: self)
             }
         }
